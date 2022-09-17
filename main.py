@@ -1,3 +1,4 @@
+import os
 import pygame
 from time import sleep,time
 
@@ -10,8 +11,8 @@ from Player import Player
 
 def main():
     FPS=1/60
-    size=(1080,720)
-    screen = pygame.display.set_mode(size)
+    size=(1300,700)
+    screen = pygame.display.set_mode(size,pygame.RESIZABLE)
     game=Game()
     game.addPlayer(Player())
     
@@ -33,7 +34,7 @@ def main():
         
         
         
-        
+        pygame.display.update()
         game
         t1=time()
         if t1-t0<FPS:
